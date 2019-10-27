@@ -1,0 +1,27 @@
+- Role::truncate(); -> it will delete the data every time you seed
+
+- first you create roles in   RolesTableSeeder  , then you create a user for each role and attach them with each other in   UsersTableSeeder
+
+- make a middleware called   accessMiddleware  , assign it's value in   Kernal.php   , then make a route with this middleware
+
+- show users in Dashboard
+
+- Edit user's roles
+
+- flash Messages
+
+- create fake users with threir roles and truncate table  role_user
+
+- create new provider   BladeExtrasServiceProvider   and use it in   app.blade.php    to hide "manage users" from nonadmin users
+
+- If I wanna delete a user , then it's roles must be deleted either , so I detached them in the    UsersController@destroy   then it will desappear from table
+                role_user    , this equals to    onDelete('cascade')
+
+-  Add role when a user registers in    RegisterController
+
+
+
+
+
+
+Course   =>  https://www.youtube.com/playlist?list=PLxFwlLOncxFJBjuZEHqaZrbbj83IRQkiz
